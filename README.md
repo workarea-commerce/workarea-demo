@@ -6,7 +6,7 @@ Get a demo instance of Workarea running with Docker.
 Setup
 --------------------------------------------------------------------------------
 
-To get setup a demo application, you can run the follow command:
+To setup a demo application, you can run the following command:
 
 ```bash
 curl -s https://raw.githubusercontent.com/workarea-commerce/workarea-demo/master/bin/install | bash
