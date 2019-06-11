@@ -25,8 +25,8 @@ RUN apt-get update \
     jpegoptim \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
- && mkdir /sandbox
- && cd /sandbox
+ && mkdir /demo
+ && cd /demo
  && bundle init
  && echo "gem 'workarea'" >> Gemfile
  && bundle install
@@ -41,10 +41,12 @@ RUN apt-get update \
       --skip-yarn \
       --skip-bundle
  && echo "gem 'workarea'" >> Gemfile
+ && echo "gem 'workarea-demo_data'" >> Gemfile
+ && echo "gem 'workarea-nvy_theme'" >> Gemfile
  && bundle install
  && bin/rails workarea:install
 
-WORKDIR /sandbox
+WORKDIR /demo
 
 EXPOSE 3000
 CMD ['bin/rails', 'server', '-b', '0.0.0.0']

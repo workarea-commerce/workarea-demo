@@ -1,15 +1,15 @@
-Workarea Sandbox
+Workarea Demo
 ================================================================================
 
-Get a sandbox instance of Workarea running with Docker.
+Get a demo instance of Workarea running with Docker.
 
 Setup
 --------------------------------------------------------------------------------
 
-To get setup a sandbox application, you can run the follow command:
+To get setup a demo application, you can run the follow command:
 
 ```bash
-curl -s https://raw.githubusercontent.com/workarea-commerce/workarea-sandbox/master/bin/install | bash
+curl -s https://raw.githubusercontent.com/workarea-commerce/workarea-demo/master/bin/install | bash
 ```
 
 This will run a script that does the following:
@@ -34,7 +34,7 @@ To stop the application, run:
 docker-compose down
 ```
 
-If you want to restart an existing sandbox, navigate to the `workarea-sandbox/` directory and run:
+If you want to restart an existing demo app, navigate to the `workarea-demo/` directory and run:
 
 ```bash
 docker-compose up

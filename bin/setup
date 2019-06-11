@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
 docker-compose up --build -d
-docker-compose exec workarea_sandbox bin/rails db:seed
+sleep 5 # Wait for services to become fully available
+docker-compose exec workarea_demo bin/rails db:seed

@@ -21,7 +21,7 @@ services:
     volumes:
       - elasticsearch:/usr/share/elasticsearch/data
 
-  workarea_sandbox:
+  workarea_demo:
     build: .
     ports:
       - 3000:3000
