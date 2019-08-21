@@ -16,7 +16,6 @@ RUN apt-get update \
     zlib1g-dev \
     libncurses5-dev \
     libffi-dev \
-    libgdbm3 \
     libgdbm-dev \
     autoconf \
     bison \
@@ -24,12 +23,12 @@ RUN apt-get update \
     imagemagick \
     jpegoptim \
  && apt-get clean \
- && rm -rf /var/lib/apt/lists/*
- && mkdir /demo
- && cd /demo
- && bundle init
- && echo "gem 'workarea'" >> Gemfile
- && bundle install
+ && rm -rf /var/lib/apt/lists/* \
+ && mkdir /demo \
+ && cd /demo \
+ && bundle init \
+ && echo "gem 'workarea'" >> Gemfile \
+ && bundle install \
  && bundle exec rails new ./ --force \
       --skip-spring \
       --skip-active-record \
@@ -39,13 +38,13 @@ RUN apt-get update \
       --skip-turbolinks \
       --skip-bootsnap \
       --skip-yarn \
-      --skip-bundle
- && echo "gem 'workarea'" >> Gemfile
- && echo "gem 'workarea-nvy_theme'" >> Gemfile
- && bundle install
- && bin/rails workarea:install
+      --skip-bundle \
+ && echo "gem 'workarea'" >> Gemfile \
+ && echo "gem 'workarea-nvy_theme'" >> Gemfile \
+ && bundle install \
+ && bin/rails g workarea:install
 
 WORKDIR /demo
 
 EXPOSE 3000
-CMD ['bin/rails', 'server', '-b', '0.0.0.0']
+CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]

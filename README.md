@@ -48,3 +48,5 @@ Troubleshooting
 If any of the Docker containers fail to start make sure you do not have any other services or containers running that are using the same ports.
 
 Workarea services use ports `27018`, `9201`, `6389`, and `3000`.
+
+If `https://localhost:3000` seems sluggish, or completely unresponsive, you might need to increase Docker's memory allocation. We suggest at least 4GB.
