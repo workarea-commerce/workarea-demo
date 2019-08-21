@@ -41,7 +41,6 @@ RUN apt-get update \
       --skip-yarn \
       --skip-bundle
  && echo "gem 'workarea'" >> Gemfile
- && echo "gem 'workarea-demo_data'" >> Gemfile
  && echo "gem 'workarea-nvy_theme'" >> Gemfile
  && bundle install
  && bin/rails workarea:install
