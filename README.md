@@ -20,12 +20,6 @@ This will run a script that does the following:
 * seed the database
 * start the application server
 
-If you have already cloned this repository, you can simply run:
-
-```bash
-bin/setup
-```
-
 Once complete, you can visit `http://localhost:3000` to view your app. The seed data provides an admin user with an email/password of `user@workarea.com/w0rkArea!`.
 
 To stop the application, run:
@@ -39,8 +33,6 @@ If you want to restart an existing demo app, navigate to the `workarea-demo/` di
 ```bash
 docker-compose up
 ```
-
-Using the `bin/setup` script will cause the application image to rebuild and the application to reseed, which will result in a longer load time than necessary for an existing application.
 
 Troubleshooting
 --------------------------------------------------------------------------------

@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-docker-compose up --build -d
-echo 'waiting for workarea services to full initialize...'
-sleep 10 # Wait for services to become fully available
-docker-compose exec workarea_demo bin/rails db:seed

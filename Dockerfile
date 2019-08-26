@@ -23,8 +23,9 @@ RUN apt-get update \
     imagemagick \
     jpegoptim \
  && apt-get clean \
- && rm -rf /var/lib/apt/lists/* \
- && mkdir /demo \
+ && rm -rf /var/lib/apt/lists/*
+
+RUN mkdir /demo \
  && cd /demo \
  && bundle init \
  && echo "gem 'workarea'" >> Gemfile \
@@ -41,8 +42,9 @@ RUN apt-get update \
       --skip-bundle \
  && echo "gem 'workarea'" >> Gemfile \
  && echo "gem 'workarea-nvy_theme'" >> Gemfile \
- && bundle install \
- && bin/rails g workarea:install
+ && bundle install
+
+RUN cd /demo && bin/rails g workarea:install
 
 WORKDIR /demo
 
