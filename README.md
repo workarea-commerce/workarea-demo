@@ -34,6 +34,12 @@ If you want to restart an existing demo app, navigate to the `workarea-demo/` di
 docker-compose up
 ```
 
+To reseed your application, ensure your containers are up, and run:
+
+```bash
+docker-compose exec -T workarea_demo bin/rails db:seed
+```
+
 Troubleshooting
 --------------------------------------------------------------------------------
 
@@ -41,4 +47,4 @@ If any of the Docker containers fail to start make sure you do not have any othe
 
 Workarea services use ports `27018`, `9201`, `6389`, and `3000`.
 
-If `https://localhost:3000` seems sluggish, or completely unresponsive, you might need to increase Docker's memory allocation. We suggest at least 4GB.
+If `https://localhost:3000` seems sluggish, or completely unresponsive, you might need to increase Docker's memory allocation within Docker's advanced preferences. We suggest at least 4GB.
