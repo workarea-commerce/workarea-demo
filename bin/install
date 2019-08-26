@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mkdir workarea-demo && cd workarea-demo
+mkdir -p workarea-demo && cd workarea-demo
 curl -s https://raw.githubusercontent.com/workarea-commerce/workarea-demo/master/docker-compose.yml -o docker-compose.yml
 
 docker-compose up --build -d
