@@ -6,4 +6,4 @@ curl -s https://raw.githubusercontent.com/workarea-commerce/workarea-demo/master
 docker-compose up --build -d
 echo 'waiting for workarea services to fully initialize...'
 sleep 15 # Wait for services to become fully available
-docker-compose exec workarea_demo bin/rails db:seed
+docker-compose exec -T workarea_demo bin/rails db:seed
