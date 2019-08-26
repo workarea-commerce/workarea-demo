@@ -20,7 +20,7 @@ This will run a script that does the following:
 * seed the database
 * start the application server
 
-Once complete, you can visit `http://localhost:3000` to view your app. The seed data provides an admin user with an email/password of `user@workarea.com/w0rkArea!`.
+Once complete, you can visit `http://localhost:3000` to view your app. The seed data provides an admin user with an email/password of `user@workarea.com/W3bl1nc!`.
 
 To stop the application, run:
 
